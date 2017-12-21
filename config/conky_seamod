@@ -4,7 +4,7 @@
 # Author  : H.R.Shadhin
 # Version : v0.1
 # License : Distributed under the terms of GNU GPL version 2 or later
-# 
+#
 # This version is a modification of conkyrc_lunatico wich is modification of conkyrc_orange
 #==============================================================================
 
@@ -72,7 +72,7 @@ own_window_argb_value 0
 own_window_colour 000000
 TEXT
 ${voffset -15}
-${font Ubuntu:size=10,weight:bold}${color4}SYSTEM INFO ${hr 2}
+${font Umpush:size=10,weight:bold}${color4}SYSTEM INFO ${hr 2}
 ${offset 15}${offset 30}${font Poky:size=10}${color6}A${voffset -1}${offset 3}${font DroidSans:size=9}${color6}Kernel Version${alignr}${font DroidSans:size=9}$sysname $kernel
 ${offset 15}${offset 30}${font Poky:size=10}${color6}x${voffset -1}${offset 3}${font DroidSans:size=9}${color6}PC-Name${alignr}${font DroidSans:size=9}$nodename
 ${offset 15}${offset 30}${font Poky:size=10}${color6}B${voffset -1}${offset 3}${font DroidSans:size=9}${color6}System Uptime${alignr}${font DroidSans:size=9}$uptime
@@ -83,36 +83,31 @@ ${offset 15}${offset 30}${font Poky:size=10}${color6}a${voffset -1}${offset 3}${
 # Showing CPU Graph
 ${voffset 8}
 ${offset 120}${cpugraph 40,183 666666 666666}${voffset -25}
-${offset 90}${font Ubuntu:size=10,weight:bold}${color5}CPU
+${offset 90}${font Umpush:size=10,weight:bold}${color5}CPU
 # Showing TOP 5 CPU-consumers
-${offset 105}${font Ubuntu:size=10,weight:normal}${color4}${top name 1}${alignr}${top cpu 1}%
-${offset 105}${font Ubuntu:size=10,weight:normal}${color1}${top name 2}${alignr}${top cpu 2}%
-${offset 105}${font Ubuntu:size=10,weight:normal}${color2}${top name 3}${alignr}${top cpu 3}%
-${offset 105}${font Ubuntu:size=10,weight:normal}${color3}${top name 4}${alignr}${top cpu 4}%
-${offset 105}${font Ubuntu:size=10,weight:normal}${color3}${top name 5}${alignr}${top cpu 5}%
+${offset 105}${font Umpush:size=10,weight:normal}${color4}${top name 1}${alignr}${top cpu 1}%
+${offset 105}${font Umpush:size=10,weight:normal}${color1}${top name 2}${alignr}${top cpu 2}%
+${offset 105}${font Umpush:size=10,weight:normal}${color2}${top name 3}${alignr}${top cpu 3}%
+${offset 105}${font Umpush:size=10,weight:normal}${color3}${top name 4}${alignr}${top cpu 4}%
+${offset 105}${font Umpush:size=10,weight:normal}${color3}${top name 5}${alignr}${top cpu 5}%
 
 #Showing memory part with TOP 5
 ${voffset 16}
-${offset 90}${font Ubuntu:size=10,weight:bold}${color5}MEM
-${offset 105}${font Ubuntu:size=10,weight:normal}${color4}${top_mem name 1}${alignr}${top_mem mem 1}%
-${offset 105}${font Ubuntu:size=10,weight:normal}${color1}${top_mem name 2}${alignr}${top_mem mem 2}%
-${offset 105}${font Ubuntu:size=10,weight:normal}${color2}${top_mem name 3}${alignr}${top_mem mem 3}%
-${offset 105}${font Ubuntu:size=10,weight:normal}${color3}${top_mem name 4}${alignr}${top_mem mem 4}%
-${offset 105}${font Ubuntu:size=10,weight:normal}${color3}${top_mem name 4}${alignr}${top_mem mem 5}%
+${offset 90}${font Umpush:size=10,weight:bold}${color5}MEM
+${offset 105}${font Umpush:size=10,weight:normal}${color4}${top_mem name 1}${alignr}${top_mem mem 1}%
+${offset 105}${font Umpush:size=10,weight:normal}${color1}${top_mem name 2}${alignr}${top_mem mem 2}%
+${offset 105}${font Umpush:size=10,weight:normal}${color2}${top_mem name 3}${alignr}${top_mem mem 3}%
+${offset 105}${font Umpush:size=10,weight:normal}${color3}${top_mem name 4}${alignr}${top_mem mem 4}%
+${offset 105}${font Umpush:size=10,weight:normal}${color3}${top_mem name 4}${alignr}${top_mem mem 5}%
 
 # Showing disk partitions: root, home and Data
 ${voffset -3}
-${offset 90}${font Ubuntu:size=10,weight:bold}${color5}DISKS
+${offset 90}${font Umpush:size=10,weight:bold}${color5}DISKS
 ${offset 120}${diskiograph 33,183 666666 666666}${voffset -30}
 ${voffset 10}
-${offset 15}${font Ubuntu:size=9,weight:bold}${color1}Free: ${font Ubuntu:size=9,weight:normal}${fs_free /}${alignr}${font Ubuntu:size=9,weight:bold}Used: ${font Ubuntu:size=9,weight:normal}${fs_used /}
-${offset 15}${font Ubuntu:size=9,weight:bold}${color1}Free: ${font Ubuntu:size=9,weight:normal}${fs_free /home}${alignr}${font Ubuntu:size=9,weight:bold}Used: ${font Ubuntu:size=9,weight:normal}${fs_used /home}
+${offset 15}${font Umpush:size=9,weight:bold}${color1}Free: ${font Umpush:size=9,weight:normal}${fs_free /}${alignr}${font Umpush:size=9,weight:bold}Used: ${font Umpush:size=9,weight:normal}${fs_used /}
+${offset 15}${font Umpush:size=9,weight:bold}${color1}Free: ${font Umpush:size=9,weight:normal}${fs_free /home}${alignr}${font Umpush:size=9,weight:bold}Used: ${font Umpush:size=9,weight:normal}${fs_used /home}
 
-${offset 10}${font Poky:size=10}${color6}y${font Ubuntu:size=10,weight:bold}${color7}HD Temp:  
-${offset 15}${font DroidSans:size=10}${color8}HD1:${offset 5}${font Ubuntu:size=9,weight:bold}${color7}${alignr}${exec /usr/sbin/hddtemp /dev/sda | awk '{print substr($0,11,length($0))}'}
-${offset 15}${font DroidSans:size=10}${color8}HD2:${offset 5}${font Ubuntu:size=9,weight:bold}${color7}${alignr}${exec /usr/sbin/hddtemp /dev/sdb | awk '{print substr($0,11,length($0))}'}
-
-
-
-
-
+${offset 10}${font Poky:size=10}${color6}y${font Umpush:size=10,weight:bold}${color7}HD Temp:  
+${offset 15}${font DroidSans:size=10}${color8}HD1:${offset 5}${font Umpush:size=9,weight:bold}${color7}${alignr}${exec /usr/sbin/hddtemp /dev/sda | awk '{print substr($0,11,length($0))}'}
+${offset 15}${font DroidSans:size=10}${color8}HD2:${offset 5}${font Umpush:size=9,weight:bold}${color7}${alignr}${exec /usr/sbin/hddtemp /dev/sdb | awk '{print substr($0,11,length($0))}'}
