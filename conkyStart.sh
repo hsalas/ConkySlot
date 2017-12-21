@@ -1,5 +1,5 @@
 #!/bin/bash
 killall conky
-cd ~/ConkySlot-master
-conky -c ~/ConkySlot-master/config/conky_seamod &
-conky -c ~/ConkySlot-master/config/conky_seamod2 &
+cd ~/ConkySlot
+conky -c ~/ConkySlot/config/conky_seamod &
+conky -c ~/ConkySlot/config/conky_seamod2 &
