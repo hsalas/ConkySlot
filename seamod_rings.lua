@@ -190,7 +190,7 @@ gauge = {
 {
     --conky_line='${if_up eth0}${downspeedf eth0}${else}${if_up wlp8s0}{downspeedf wlp8s0}${endif}${endif}',
     conky_line='${if_match "${addr eth0}" != "No Address"}${downspeedf eth0}${else}${if_match "${addr wlp8s0}" != "No Address"}${downspeedf wlp8s0}${endif}${endif}',
-    name='downspeedf',             arg='eth0',                  max_value=100,
+    name='downspeedf',             arg='wlp8s0',                  max_value=100,
     x=70,                          y=640,
     graph_radius=55,
     graph_thickness=8,
@@ -213,7 +213,7 @@ gauge = {
 {
     --conky_line='${if_up eth0}${upspeedf eth0}${else}${if_up wlp8s0}${upspeedf wlp8s0}${endif}${endif}',
     conky_line='${if_match "${addr eth0}" != "No Address"}${upspeedf eth0}${else}${if_match "${addr wlp8s0}" != "No Address"}${upspeedf wlp8s0}${endif}${endif}',
-    name='upspeedf',               arg='eth0',                  max_value=100,
+    name='upspeedf',               arg='wlp8s0',                  max_value=100,
     x=70,                          y=640,
     graph_radius=45,
     graph_thickness=8,

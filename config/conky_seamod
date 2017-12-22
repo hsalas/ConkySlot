@@ -83,11 +83,11 @@ ${offset 15}${offset 30}${font Poky:size=10}${color7}a${voffset -1}${offset 3}${
 
 # Showing CPU Graph
 ${voffset -20}
-${offset 180}${color1}${font Ubuntu:size=10:style=bold}Temp: ${alignr}${font Ubuntu:size=10:style=normal}${color2}${hwmon 0 temp 1} C
-${offset 180}${color1}${font Ubuntu:size=10:style=bold}Fan: ${alignr}${font Ubuntu:size=10:style=normal}${color2}${hwmon 0 fan 1} RPM
-${offset 180}${color1}${font Ubuntu:size=10:style=bold}Freq: ${alignr}${font Ubuntu:size=10:style=normal}${color2}${lua freq_min} - ${lua freq_max} MHz
+${offset 180}${color1}${font Ubuntu:size=10:style=bold}Temp: ${alignr}${font Ubuntu:size=10:style=bold}${color2}${hwmon 0 temp 1} C
+${offset 180}${color1}${font Ubuntu:size=10:style=bold}Fan: ${alignr}${font Ubuntu:size=10:style=bold}${color2}${hwmon 0 fan 1} RPM
+${offset 180}${color1}${font Ubuntu:size=10:style=bold}Freq: ${alignr}${font Ubuntu:size=10:style=bold}${color2}${lua freq_min} - ${lua freq_max} MHz
 ${voffset -30}
-${offset 140}${cpugraph 50,190 666666 666666}${voffset -25}
+${offset 140}${cpugraph 50,200 666666 666666}${voffset -25}
 ${offset 90}${font Suruma:size=11:weight=bold}${color5}CPU
 # Showing TOP 5 CPU-consumers
 ${offset 105}${font Suruma:size=12:style:normal}${color4}${top name 1}${alignr}${top cpu 1}%
@@ -98,11 +98,11 @@ ${offset 105}${font Suruma:size=10:style:normal}${color3}${top name 5}${alignr}$
 
 #Showing memory part with TOP 5
 ${voffset -35}
-${offset 180}${color1}${font Ubuntu:size=10:style=bold}Availble: ${alignr}${font Ubuntu:size=10:style=normal}${color2}${memeasyfree}
-${offset 180}${color1}${font Ubuntu:size=10:style=bold}Cache: ${alignr}${font Ubuntu:size=10:style=normal}${color2}${cached}
-${offset 180}${color1}${font Ubuntu:size=10:style=bold}Buffer: ${alignr}${font Ubuntu:size=10:style=normal}${color2}${buffers}
+${offset 180}${color1}${font Ubuntu:size=10:style=bold}Availble: ${alignr}${font Ubuntu:size=10:style=bold}${color2}${memeasyfree}
+${offset 180}${color1}${font Ubuntu:size=10:style=bold}Cache: ${alignr}${font Ubuntu:size=10:style=bold}${color2}${cached}
+${offset 180}${color1}${font Ubuntu:size=10:style=bold}Buffer: ${alignr}${font Ubuntu:size=10:style=bold}${color2}${buffers}
 ${voffset -30}
-${offset 140}${memgraph 30,170 666666 666666}
+${offset 140}${memgraph 30,200 666666 666666}
 ${voffset -35}
 ${offset 95}${font Suruma:size=11:weight=bold}${color5}MEM
 ${offset 110}${font Suruma:size=12:style=normal}${color4}${top_mem name 1}${alignr}${top_mem mem_res 1}
@@ -115,7 +115,7 @@ ${offset 110}${font Suruma:size=10:style=normal}${color3}${top_mem name 5}${alig
 ${voffset 12}
 ${offset 90}${font Suruma:size=11:weight=bold}${color5}DISKS
 ${voffset -95}
-${offset 140}${diskiograph 40,170 666666 666666}
+${offset 140}${diskiograph 40,200 666666 666666}
 ${voffset -25}
 ${offset 140}${font Ubuntu:size=10:style=bold}${color6}Free: ${font Ubuntu:size=10:style=bold}${fs_free /}${alignr}${font Ubuntu:size=10:style=bold}Used: ${font Ubuntu:size=10:style=bold}${fs_used /}
 ${offset 140}${font Ubuntu:size=10:style=bold}${color6}Free: ${font Ubuntu:size=10:style=bold}${fs_free /home}${alignr}${font Ubuntu:size=10:style=bold}Used: ${font Ubuntu:size=10:style=bold}${fs_used /home}
