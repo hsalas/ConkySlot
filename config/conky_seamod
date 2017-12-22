@@ -86,8 +86,8 @@ ${voffset -20}
 ${offset 180}${color1}${font Ubuntu:size=10:style=bold}Temp: ${alignr}${font Ubuntu:size=10:style=bold}${color2}${hwmon 0 temp 1} C
 ${offset 180}${color1}${font Ubuntu:size=10:style=bold}Fan: ${alignr}${font Ubuntu:size=10:style=bold}${color2}${hwmon 0 fan 1} RPM
 ${offset 180}${color1}${font Ubuntu:size=10:style=bold}Freq: ${alignr}${font Ubuntu:size=10:style=bold}${color2}${lua freq_min} - ${lua freq_max} MHz
-${voffset -30}
-${offset 140}${cpugraph 50,200 666666 666666}${voffset -25}
+${voffset -20}
+${offset 140}${cpugraph 40,200 666666 666666}${voffset -25}
 ${offset 90}${font Suruma:size=11:weight=bold}${color5}CPU
 # Showing TOP 5 CPU-consumers
 ${offset 105}${font Suruma:size=12:style:normal}${color4}${top name 1}${alignr}${top cpu 1}%
