@@ -71,43 +71,83 @@ lua_draw_hook_post main
 own_window_argb_value 0
 own_window_colour 000000
 TEXT
-${voffset -15}
-${font Umpush:size=10,weight:bold}${color4}SYSTEM INFO ${hr 2}
-${offset 15}${offset 30}${font Poky:size=10}${color6}A${voffset -1}${offset 3}${font DroidSans:size=9}${color6}Kernel Version${alignr}${font DroidSans:size=9}$sysname $kernel
-${offset 15}${offset 30}${font Poky:size=10}${color6}x${voffset -1}${offset 3}${font DroidSans:size=9}${color6}PC-Name${alignr}${font DroidSans:size=9}$nodename
-${offset 15}${offset 30}${font Poky:size=10}${color6}B${voffset -1}${offset 3}${font DroidSans:size=9}${color6}System Uptime${alignr}${font DroidSans:size=9}$uptime
-${offset 15}${offset 30}${font Poky:size=10}${color6}g${voffset -2}${offset 3}${font DroidSans:size=9}${color6}System${offset 3}Load${alignr}${font DroidSans:size=9}${loadavg}${font}
-${offset 15}${offset 30}${font Poky:size=10}${color6}i${voffset -1}${offset 3}${font DroidSans:size=9}${color6}Processor${alignr}${font DroidSans:size=9}${execi 1000 cat /proc/cpuinfo | awk '/model name/ {gsub(/\([^)]+\)/,""); print $4, $5, $6, $8, $10}' | uniq}${font}
-${offset 15}${offset 30}${font Poky:size=10}${color6}a${voffset -1}${offset 3}${font DroidSans:size=9}${color6}MainBoard${alignr}${font DroidSans:size=9}${pre_exec dmidecode -s baseboard-Manufacturer | awk '{print $1, $2}'}-${pre_exec dmidecode -s baseboard-Product-Name}
+${voffset -12}
+${font Suruma:size=12:weight:bold}${color4}SYSTEM INFO ${hr 2}
+${voffset -30}
+${offset 15}${offset 30}${font Poky:size=10}${color7}A${voffset -1}${offset 3}${font DroidSans:size=9:weight=bold}${color7}Kernel Version${alignr}${font DroidSans:size=9:weight=bold}$sysname $kernel
+${offset 15}${offset 30}${font Poky:size=10}${color7}x${voffset -1}${offset 3}${font DroidSans:size=9:weight=bold}${color7}PC-Name${alignr}${font DroidSans:size=9:weight=bold}$nodename
+${offset 15}${offset 30}${font Poky:size=10}${color7}B${voffset -1}${offset 3}${font DroidSans:size=9:weight=bold}${color7}System Uptime${alignr}${font DroidSans:size=9:weight=bold}$uptime
+${offset 15}${offset 30}${font Poky:size=10}${color7}g${voffset -2}${offset 3}${font DroidSans:size=9:weight=bold}${color7}System${offset 3}Load${alignr}${font DroidSans:size=9:weight=bold}${loadavg}${font}
+${offset 15}${offset 30}${font Poky:size=10}${color7}i${voffset -1}${offset 3}${font DroidSans:size=9:weight=bold}${color7}Processor${alignr}${font DroidSans:size=9:weight=bold}${execi 1000 cat /proc/cpuinfo | awk '/model name/ {gsub(/\([^)]+\)/,""); print $4, $5, $6, $8, $10}' | uniq}${font}
+${offset 15}${offset 30}${font Poky:size=10}${color7}a${voffset -1}${offset 3}${font DroidSans:size=9:weight=bold}${color7}MainBoard${alignr}${font DroidSans:size=9:weight=bold}${exec dmidecode -s baseboard-Manufacturer | awk '{print $1, $2}'}-${exec dmidecode -s baseboard-Product-Name}
 
 # Showing CPU Graph
-${voffset 8}
-${offset 120}${cpugraph 40,183 666666 666666}${voffset -25}
-${offset 90}${font Umpush:size=10,weight:bold}${color5}CPU
+${voffset -20}
+${offset 180}${color1}${font Ubuntu:size=10:style=bold}Temp: ${alignr}${font Ubuntu:size=10:style=normal}${color2}${hwmon 0 temp 1} C
+${offset 180}${color1}${font Ubuntu:size=10:style=bold}Fan: ${alignr}${font Ubuntu:size=10:style=normal}${color2}${hwmon 0 fan 1} RPM
+${offset 180}${color1}${font Ubuntu:size=10:style=bold}Freq: ${alignr}${font Ubuntu:size=10:style=normal}${color2}${lua freq_min} - ${lua freq_max} MHz
+${voffset -30}
+${offset 140}${cpugraph 50,190 666666 666666}${voffset -25}
+${offset 90}${font Suruma:size=11:weight=bold}${color5}CPU
 # Showing TOP 5 CPU-consumers
-${offset 105}${font Umpush:size=10,weight:normal}${color4}${top name 1}${alignr}${top cpu 1}%
-${offset 105}${font Umpush:size=10,weight:normal}${color1}${top name 2}${alignr}${top cpu 2}%
-${offset 105}${font Umpush:size=10,weight:normal}${color2}${top name 3}${alignr}${top cpu 3}%
-${offset 105}${font Umpush:size=10,weight:normal}${color3}${top name 4}${alignr}${top cpu 4}%
-${offset 105}${font Umpush:size=10,weight:normal}${color3}${top name 5}${alignr}${top cpu 5}%
+${offset 105}${font Suruma:size=12:style:normal}${color4}${top name 1}${alignr}${top cpu 1}%
+${offset 105}${font Suruma:size=11:style:normal}${color1}${top name 2}${alignr}${top cpu 2}%
+${offset 105}${font Suruma:size=10:style:normal}${color2}${top name 3}${alignr}${top cpu 3}%
+${offset 105}${font Suruma:size=10:style:normal}${color3}${top name 4}${alignr}${top cpu 4}%
+${offset 105}${font Suruma:size=10:style:normal}${color3}${top name 5}${alignr}${top cpu 5}%
 
 #Showing memory part with TOP 5
-${voffset 16}
-${offset 90}${font Umpush:size=10,weight:bold}${color5}MEM
-${offset 105}${font Umpush:size=10,weight:normal}${color4}${top_mem name 1}${alignr}${top_mem mem 1}%
-${offset 105}${font Umpush:size=10,weight:normal}${color1}${top_mem name 2}${alignr}${top_mem mem 2}%
-${offset 105}${font Umpush:size=10,weight:normal}${color2}${top_mem name 3}${alignr}${top_mem mem 3}%
-${offset 105}${font Umpush:size=10,weight:normal}${color3}${top_mem name 4}${alignr}${top_mem mem 4}%
-${offset 105}${font Umpush:size=10,weight:normal}${color3}${top_mem name 4}${alignr}${top_mem mem 5}%
+${voffset -35}
+${offset 180}${color1}${font Ubuntu:size=10:style=bold}Availble: ${alignr}${font Ubuntu:size=10:style=normal}${color2}${memeasyfree}
+${offset 180}${color1}${font Ubuntu:size=10:style=bold}Cache: ${alignr}${font Ubuntu:size=10:style=normal}${color2}${cached}
+${offset 180}${color1}${font Ubuntu:size=10:style=bold}Buffer: ${alignr}${font Ubuntu:size=10:style=normal}${color2}${buffers}
+${voffset -30}
+${offset 140}${memgraph 30,170 666666 666666}
+${voffset -35}
+${offset 95}${font Suruma:size=11:weight=bold}${color5}MEM
+${offset 110}${font Suruma:size=12:style=normal}${color4}${top_mem name 1}${alignr}${top_mem mem_res 1}
+${offset 110}${font Suruma:size=11:style=normal}${color1}${top_mem name 2}${alignr}${top_mem mem_res 2}
+${offset 110}${font Suruma:size=10:style=normal}${color2}${top_mem name 3}${alignr}${top_mem mem_res 3}
+${offset 110}${font Suruma:size=10:style=normal}${color3}${top_mem name 4}${alignr}${top_mem mem_res 4}
+${offset 110}${font Suruma:size=10:style=normal}${color3}${top_mem name 5}${alignr}${top_mem mem_res 5}
 
 # Showing disk partitions: root, home and Data
-${voffset -3}
-${offset 90}${font Umpush:size=10,weight:bold}${color5}DISKS
-${offset 120}${diskiograph 33,183 666666 666666}${voffset -30}
-${voffset 10}
-${offset 15}${font Umpush:size=9,weight:bold}${color1}Free: ${font Umpush:size=9,weight:normal}${fs_free /}${alignr}${font Umpush:size=9,weight:bold}Used: ${font Umpush:size=9,weight:normal}${fs_used /}
-${offset 15}${font Umpush:size=9,weight:bold}${color1}Free: ${font Umpush:size=9,weight:normal}${fs_free /home}${alignr}${font Umpush:size=9,weight:bold}Used: ${font Umpush:size=9,weight:normal}${fs_used /home}
+${voffset 12}
+${offset 90}${font Suruma:size=11:weight=bold}${color5}DISKS
+${voffset -95}
+${offset 140}${diskiograph 40,170 666666 666666}
+${voffset -25}
+${offset 140}${font Ubuntu:size=10:style=bold}${color6}Free: ${font Ubuntu:size=10:style=bold}${fs_free /}${alignr}${font Ubuntu:size=10:style=bold}Used: ${font Ubuntu:size=10:style=bold}${fs_used /}
+${offset 140}${font Ubuntu:size=10:style=bold}${color6}Free: ${font Ubuntu:size=10:style=bold}${fs_free /home}${alignr}${font Ubuntu:size=10:style=bold}Used: ${font Ubuntu:size=10:style=bold}${fs_used /home}
 
-${offset 10}${font Poky:size=10}${color6}y${font Umpush:size=10,weight:bold}${color7}HD Temp:  
-${offset 15}${font DroidSans:size=10}${color8}HD1:${offset 5}${font Umpush:size=9,weight:bold}${color7}${alignr}${exec /usr/sbin/hddtemp /dev/sda | awk '{print substr($0,11,length($0))}'}
-${offset 15}${font DroidSans:size=10}${color8}HD2:${offset 5}${font Umpush:size=9,weight:bold}${color7}${alignr}${exec /usr/sbin/hddtemp /dev/sdb | awk '{print substr($0,11,length($0))}'}
+# Network data (assumes wireless info). NET ring is mostly useless but looks pretty, main info is in the graphs
+${voffset -30}
+${if_up eth0}
+${if_match "${addr eth0}" != "No Address"}\
+${offset 180}${font Ubuntu:size=10:style=bold}${color1}Wired
+${offset 180}${font Ubuntu:size=10:style=bold}${color1}IP: ${alignr}${font Ubuntu:size=10:style=normal}${color2}${addr eth0}
+${offset 180}${font Ubuntu:size=10:style=bold}${color1}Public IP: ${alignr}${font Ubuntu:size=10:style=normal}${color2}${curl http://api.ipify.org 300}
+${offset 145}${upspeedgraph eth0 25,200 4B1B0C FF5C2B 1280KiB -l}
+${offset 145}${color1}${font Ubuntu:size=10:style=bold}Up: ${alignr}${font Ubuntu:size=10:style=normal}${color3}${upspeed eth0} / ${totalup eth0}
+${offset 145}${downspeedgraph eth0 25,200 324D23 77B753 1280KiB -l}
+${offset 145}${color1}${font Ubuntu:size=10:style=bold}Down: ${alignr}${font Ubuntu:size=10:style=normal}${color3}${downspeed eth0} / ${totaldown eth0}
+${else}\
+${if_match "${addr wlp8s0}" != "No Address"}\
+${offset 180}${font Ubuntu:size=10:style=bold}${color1}Wifi: ${alignr}${font Ubuntu:size=10:style=normal}${color2}${wireless_essid} (${wireless_bitrate wlp8s0})
+${offset 180}${font Ubuntu:size=10:style=bold}${color1}IP: ${alignr}${font Ubuntu:size=10:style=normal}${color2}${addr wlp8s0}
+${offset 180}${font Ubuntu:size=10:style=bold}${color1}Public IP: ${alignr}${font Ubuntu:size=10:style=normal}${color2}${curl http://api.ipify.org 300}
+${offset 145}${upspeedgraph wlp8s0 25,200 4B1B0C FF5C2B 1280KiB -l}
+${offset 145}${color1}${font Ubuntu:size=10:style=bold}Up: ${alignr}${font Ubuntu:size=10:style=normal}${color3}${upspeed wlp8s0} / ${totalup wlp8s0}
+${offset 145}${downspeedgraph wlp8s0 25,200 324D23 77B753 1280KiB -l}
+${offset 145}${color1}${font Ubuntu:size=10:style=bold}Down: ${alignr}${font Ubuntu:size=10:style=normal}${color3}${downspeed wlp8s0} / ${totaldown wlp8s0}
+${else}\
+${offset 180}${font Ubuntu:size=10:style=bold}${color1}Disconnected
+${offset 180}${font Ubuntu:size=10:style=normal}${color3}(eth0 and wlp8s0 have no IP)
+${offset 145}${upspeedgraph eth0 25,200 4B1B0C FF5C2B 1280KiB -l}
+${offset 145}${color1}${font Ubuntu:size=10:style=bold}Up: ${alignr}${font Ubuntu:size=10:style=normal}${color3}NA
+${offset 145}${downspeedgraph eth0 25,200 324D23 77B753 1280KiB -l}
+${offset 145}${color1}${font Ubuntu:size=10:style=bold}Down: ${alignr}${font Ubuntu:size=10:style=normal}${color3}NA
+${endif}\
+${endif}\
+${voffset -100}
+${offset 105}${font Ubuntu:size=11:style=bold}${color5}NET
