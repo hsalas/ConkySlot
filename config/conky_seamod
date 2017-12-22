@@ -74,12 +74,12 @@ TEXT
 ${voffset 10}
 ${font Suruma:size=12:weight:bold}${color4}SYSTEM INFO ${hr 2}
 ${voffset -30}
-${offset 15}${offset 30}${font Poky:size=10}${color7}A${voffset -1}${offset 3}${font DroidSans:size=9:weight=bold}${color7}Kernel Version${alignr}${font DroidSans:size=9:weight=bold}$sysname $kernel
-${offset 15}${offset 30}${font Poky:size=10}${color7}x${voffset -1}${offset 3}${font DroidSans:size=9:weight=bold}${color7}PC-Name${alignr}${font DroidSans:size=9:weight=bold}$nodename
-${offset 15}${offset 30}${font Poky:size=10}${color7}B${voffset -1}${offset 3}${font DroidSans:size=9:weight=bold}${color7}System Uptime${alignr}${font DroidSans:size=9:weight=bold}$uptime
-${offset 15}${offset 30}${font Poky:size=10}${color7}g${voffset -2}${offset 3}${font DroidSans:size=9:weight=bold}${color7}System${offset 3}Load${alignr}${font DroidSans:size=9:weight=bold}${loadavg}${font}
-${offset 15}${offset 30}${font Poky:size=10}${color7}i${voffset -1}${offset 3}${font DroidSans:size=9:weight=bold}${color7}Processor${alignr}${font DroidSans:size=9:weight=bold}${execi 1000 cat /proc/cpuinfo | awk '/model name/ {gsub(/\([^)]+\)/,""); print $4, $5, $6, $8, $10}' | uniq}${font}
-${offset 15}${offset 30}${font Poky:size=10}${color7}a${voffset -1}${offset 3}${font DroidSans:size=9:weight=bold}${color7}MainBoard${alignr}${font DroidSans:size=9:weight=bold}${exec dmidecode -s baseboard-Manufacturer | awk '{print $1, $2}'}-${exec dmidecode -s baseboard-Product-Name}
+${offset 15}${offset 30}${font Poky:size=8}${color7}A${voffset -3}${offset 3}${font Suruma:size=9:weight=bold}${color7}Kernel Version${alignr}${font Suruma:size=9:weight=bold}$sysname $kernel
+${offset 15}${offset 30}${font Poky:size=8}${color7}x${voffset -3}${offset 3}${font Suruma:size=9:weight=bold}${color7}PC-Name${alignr}${font Suruma:size=9:weight=bold}$nodename
+${offset 15}${offset 30}${font Poky:size=8}${color7}B${voffset -3}${offset 3}${font Suruma:size=9:weight=bold}${color7}System Uptime${alignr}${font Suruma:size=9:weight=bold}$uptime
+${offset 15}${offset 30}${font Poky:size=8}${color7}g${voffset -3}${offset 3}${font Suruma:size=9:weight=bold}${color7}System${offset 3}Load${alignr}${font Suruma:size=9:weight=bold}${loadavg}${font}
+${offset 15}${offset 30}${font Poky:size=8}${color7}i${voffset -3}${offset 3}${font Suruma:size=9:weight=bold}${color7}Processor${alignr}${font Suruma:size=9:weight=bold}${execi 1000 cat /proc/cpuinfo | awk '/model name/ {gsub(/\([^)]+\)/,""); print $4, $5, $6, $8, $10}' | uniq}${font}
+${offset 15}${offset 30}${font Poky:size=8}${color7}a${voffset -3}${offset 3}${font Suruma:size=9:weight=bold}${color7}MainBoard${alignr}${font Suruma:size=9:weight=bold}${exec dmidecode -s baseboard-Manufacturer | awk '{print $1, $2}'}-${exec dmidecode -s baseboard-Product-Name}
 
 # Showing CPU Graph
 ${voffset -20}
