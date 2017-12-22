@@ -71,7 +71,7 @@ lua_draw_hook_post main
 own_window_argb_value 0
 own_window_colour 000000
 TEXT
-${voffset -12}
+${voffset 10}
 ${font Suruma:size=12:weight:bold}${color4}SYSTEM INFO ${hr 2}
 ${voffset -30}
 ${offset 15}${offset 30}${font Poky:size=10}${color7}A${voffset -1}${offset 3}${font DroidSans:size=9:weight=bold}${color7}Kernel Version${alignr}${font DroidSans:size=9:weight=bold}$sysname $kernel
@@ -149,5 +149,5 @@ ${offset 145}${downspeedgraph eth0 25,200 324D23 77B753 1280KiB -l}
 ${offset 145}${color1}${font Ubuntu:size=10:style=bold}Down: ${alignr}${font Ubuntu:size=10:style=normal}${color3}NA
 ${endif}\
 ${endif}\
-${voffset -100}
+${voffset -80}
 ${offset 105}${font Ubuntu:size=11:style=bold}${color5}NET

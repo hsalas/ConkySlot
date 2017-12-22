@@ -18,7 +18,7 @@ require 'cairo'
 gauge = {
 {
     name='cpu',                    arg='cpu0',                  max_value=100,
-    x=70,                          y=180,
+    x=70,                          y=205,
     graph_radius=55,
     graph_thickness=8,
     graph_start_angle=180,
@@ -39,7 +39,7 @@ gauge = {
 },
 {
     name='cpu',                    arg='cpu1',                  max_value=100,
-    x=70,                          y=180,
+    x=70,                          y=205,
     graph_radius=45,
     graph_thickness=8,
     graph_start_angle=180,
@@ -60,7 +60,7 @@ gauge = {
 },
 {
     name='cpu',                    arg='cpu2',                  max_value=100,
-    x=70,                          y=180,
+    x=70,                          y=205,
     graph_radius=30,
     graph_thickness=10,
     graph_start_angle=180,
@@ -83,7 +83,7 @@ gauge = {
 -- Memory rings
 {
     name='memperc',                arg='',                      max_value=100,
-    x=70,                          y=350,
+    x=70,                          y=375,
     graph_radius=55,
     graph_thickness=8,
     graph_start_angle=180,
@@ -104,7 +104,7 @@ gauge = {
 },
 {
     name='swapperc',               arg='',                      max_value=100,
-    x=70,                          y=350,
+    x=70,                          y=375,
     graph_radius=45,
     graph_thickness=8,
     graph_start_angle=180,
@@ -125,7 +125,7 @@ gauge = {
 },
 {
     name='fs_used_perc',           arg='/var',                  max_value=100,
-    x=70,                          y=515,
+    x=70,                          y=540,
     graph_radius=35,
     graph_thickness=8,
     graph_start_angle=180,
@@ -146,7 +146,7 @@ gauge = {
 },
 {
     name='fs_used_perc',           arg='/home/',                     max_value=100,
-    x=70,                          y=515,
+    x=70,                          y=540,
     graph_radius=55,
     graph_thickness=8,
     graph_start_angle=180,
@@ -167,7 +167,7 @@ gauge = {
 },
 {
     name='fs_used_perc',           arg='/',                     max_value=100,
-    x=70,                          y=515,
+    x=70,                          y=540,
     graph_radius=45,
     graph_thickness=8,
     graph_start_angle=180,
@@ -191,7 +191,7 @@ gauge = {
     --conky_line='${if_up eth0}${downspeedf eth0}${else}${if_up wlp8s0}{downspeedf wlp8s0}${endif}${endif}',
     conky_line='${if_match "${addr eth0}" != "No Address"}${downspeedf eth0}${else}${if_match "${addr wlp8s0}" != "No Address"}${downspeedf wlp8s0}${endif}${endif}',
     name='downspeedf',             arg='wlp8s0',                  max_value=100,
-    x=70,                          y=640,
+    x=70,                          y=665,
     graph_radius=55,
     graph_thickness=8,
     graph_start_angle=180,
@@ -214,7 +214,7 @@ gauge = {
     --conky_line='${if_up eth0}${upspeedf eth0}${else}${if_up wlp8s0}${upspeedf wlp8s0}${endif}${endif}',
     conky_line='${if_match "${addr eth0}" != "No Address"}${upspeedf eth0}${else}${if_match "${addr wlp8s0}" != "No Address"}${upspeedf wlp8s0}${endif}${endif}',
     name='upspeedf',               arg='wlp8s0',                  max_value=100,
-    x=70,                          y=640,
+    x=70,                          y=665,
     graph_radius=45,
     graph_thickness=8,
     graph_start_angle=180,
@@ -236,7 +236,7 @@ gauge = {
 {
     conky_line='${if_match "${addr wlp8s0}" != "No Address"}${wireless_link_qual_perc wlp8s0}${else}0${endif}',
     name='wireless_link_qual_perc', arg='wlp8s0',                max_value=100,
-    x=70,                          y=640,
+    x=70,                          y=665,
     graph_radius=30,
     graph_thickness=8,
     graph_start_angle=180,
